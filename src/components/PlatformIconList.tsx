@@ -11,13 +11,15 @@ import {
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
-import { Platform } from "../hooks/usePlatforms";
+import { Platform } from "../entities/Platform";
 
 interface Props {
-  platforms: Platform[];
+  platforms: Platform[] | undefined;
 }
 
 const PlatformIconList = ({ platforms }: Props) => {
+  if (!platforms) return;
+
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,

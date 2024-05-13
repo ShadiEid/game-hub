@@ -1,4 +1,4 @@
-import { Genre } from "../hooks/useGenres";
+import { Genre } from "../entities/Genre";
 import { FetchResponse } from "../services/api-client";
 
 export default {

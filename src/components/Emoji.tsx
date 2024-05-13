@@ -4,10 +4,12 @@ import meh from "../assets/meh.webp";
 import { Image, ImageProps } from "@chakra-ui/react";
 
 interface Props {
-  rating: number;
+  rating: number | undefined;
 }
 
 const Emoji = ({ rating }: Props) => {
+  if (!rating) return;
+
   if (rating < 3) return null;
 
   const emoji: { [key: number]: ImageProps } = {
