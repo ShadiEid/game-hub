@@ -1,21 +1,22 @@
+import { Heading, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import ExpnadableText from "../components/ExpnadableText";
 import useGame from "../hooks/useGame";
-import { Heading, Spinner, Text } from "@chakra-ui/react";
 
 const GameDetailsPage = () => {
   //   throw new Error();
 
   const { slug } = useParams();
-  const { data, isLoading, error } = useGame(slug!);
+  const { data: game, isLoading, error } = useGame(slug!);
 
   if (isLoading) return <Spinner />;
 
-  if (error) throw error;
+  if (error || !game) throw error;
 
   return (
     <div>
-      <Heading>{data?.name}</Heading>
-      <Text>{data?.description_raw}</Text>
+      <Heading>{game.name}</Heading>
+      <ExpnadableText>{game.description_raw!}</ExpnadableText>
     </div>
   );
 };
