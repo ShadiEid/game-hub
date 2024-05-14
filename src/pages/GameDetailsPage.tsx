@@ -4,6 +4,7 @@ import ExpnadableText from "../components/ExpnadableText";
 import GameArrtibutes from "../components/GameArrtibutes";
 import useGame from "../hooks/useGame";
 import VideoTrailer from "../components/VideoTrailer";
+import GameScreenshots from "../components/GameScreenshots";
 
 const GameDetailsPage = () => {
   //   throw new Error();
@@ -21,6 +22,7 @@ const GameDetailsPage = () => {
       <ExpnadableText>{game.description_raw!}</ExpnadableText>
       <GameArrtibutes game={game} />
       <VideoTrailer gameId={game.id} />
+      <GameScreenshots gameId={game.id} />
     </>
   );
 };
