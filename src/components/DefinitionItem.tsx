@@ -9,9 +9,10 @@ interface Props {
 const DefinitionItem = ({ term, children }: Props) => {
   return (
     <Box my={5}>
-      <Heading as="td" fontSize={"md"} color="gray.600">
+      <Heading as="dt" fontSize={"md"} color="gray.600">
         {term}
       </Heading>
+
       <dd>{children}</dd>
     </Box>
   );
