@@ -14,7 +14,7 @@ import getCroppedImageUrl from "../services/image-url";
 import CriticScore from "./CriticScore";
 import Emoji from "./Emoji";
 import PlatformIconList from "./PlatformIconList";
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 
 interface Props {
   game: Game;
