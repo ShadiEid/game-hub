@@ -1,4 +1,5 @@
 # React + TypeScript + Vite
+GameHub is a video game discovery web app that helps you find new and interesting games to play. With GameHub, you can search for games by platform, genre, and more.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
